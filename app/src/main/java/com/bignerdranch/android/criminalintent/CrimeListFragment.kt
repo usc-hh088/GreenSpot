@@ -1,5 +1,6 @@
 package com.bignerdranch.android.criminalintent
 
+//import com.example.criminalintent.databinding.FragmentCrimeListBinding
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
