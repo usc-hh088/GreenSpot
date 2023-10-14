@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.criminalintent'
+    namespace 'com.bignerdranch.android.criminalintent'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.criminalintent"
+        applicationId "com.bignerdranch.android.criminalintent"
         minSdk 24
         targetSdk 33
         versionCode 1

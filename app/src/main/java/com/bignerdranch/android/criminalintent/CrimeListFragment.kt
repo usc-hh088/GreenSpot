@@ -12,7 +12,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.criminalintent.databinding.FragmentCrimeListBinding
+import com.bignerdranch.android.criminalintent.databinding.FragmentCrimeListBinding
 import kotlinx.coroutines.launch
 
 
