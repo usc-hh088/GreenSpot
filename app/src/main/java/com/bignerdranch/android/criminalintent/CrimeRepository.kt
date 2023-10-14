@@ -11,7 +11,8 @@ import java.util.UUID
 
 private const val DATABASE_NAME = "crime-database"
 
-class CrimeRepository private constructor(context: Context, private val coroutineScope: CoroutineScope = GlobalScope) {
+class CrimeRepository private constructor(context: Context,
+                                          private val coroutineScope: CoroutineScope = GlobalScope) {
     private val database: CrimeDatabase = Room
         .databaseBuilder(
             context.applicationContext,

@@ -18,9 +18,16 @@
         android:id="@+id/crimeDetailFragment"
         android:name="com.bignerdranch.android.criminalintent.CrimeDetailFragment"
         android:label="CrimeDetailFragment"
-        tools:layout="@layout/fragment_crime_detail" >
+        >
         <argument
             android:name="crimeId"
             app:argType="java.util.UUID" />
+        <action
+            android:id="@+id/select_date"
+            app:destination="@id/datePickerFragment" />
     </fragment>
+    <dialog
+        android:id="@+id/datePickerFragment"
+        android:name="com.bignerdranch.android.criminalintent.DatePickerFragment"
+        android:label="DatePickerFragment" />
 </navigation>
