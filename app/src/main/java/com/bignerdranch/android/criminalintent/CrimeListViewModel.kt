@@ -1,16 +1,11 @@
 package com.bignerdranch.android.criminalintent
 
-import android.content.ContentValues.TAG
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
-import java.util.Date
-import java.util.UUID
 
 private const val TAG = "CrimeListViewModel"
 class CrimeListViewModel : ViewModel() {
@@ -24,5 +19,8 @@ class CrimeListViewModel : ViewModel() {
                 _crimes.value = it
             }
         }
+    }
+    fun addCrime(crime: Crime){
+        crimeRepository.addCrime(crime)
     }
 }
