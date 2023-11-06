@@ -2,11 +2,11 @@
   "formatVersion": 1,
   "database": {
     "version": 3,
-    "identityHash": "81f2ccd0cbc88ef0696bcce4b5d5c0e9",
+    "identityHash": "2079a2d71424648e44c8a64e4274a48c",
     "entities": [
       {
         "tableName": "Crime",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` BLOB NOT NULL, `title` TEXT NOT NULL, `date` INTEGER NOT NULL, `isSolved` INTEGER NOT NULL, PRIMARY KEY(`id`))",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` BLOB NOT NULL, `title` TEXT NOT NULL, `date` INTEGER NOT NULL, `isSolved` INTEGER NOT NULL, `suspect` TEXT NOT NULL, `photoFileName` TEXT, PRIMARY KEY(`id`))",
         "fields": [
           {
             "fieldPath": "id",
@@ -31,6 +31,18 @@
             "columnName": "isSolved",
             "affinity": "INTEGER",
             "notNull": true
+          },
+          {
+            "fieldPath": "suspect",
+            "columnName": "suspect",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "photoFileName",
+            "columnName": "photoFileName",
+            "affinity": "TEXT",
+            "notNull": false
           }
         ],
         "primaryKey": {
@@ -46,7 +58,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '81f2ccd0cbc88ef0696bcce4b5d5c0e9')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '2079a2d71424648e44c8a64e4274a48c')"
     ]
   }
 }
